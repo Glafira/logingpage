@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Fotm</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;1,600;1,700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	
+	<main>
+		<nav>
+			<div class="container">
+			<div class="logo">
+				<div class="icon"></div>
+				<div class="logo_cap">АВР</div>
+			</div>
+			<div ></div>
+			<div class="lang " onclick="openLang()">
+				<div id="cur-lang" class="cur-lang">	EN	</div>
+				<ul>	
+					<li onclick="setLang('En')">En </li>
+					<li onclick="setLang('Ru')">Рус</li>
+					<li onclick="setLang('Ua')">Укр</li>
+
+				</ul>
+
+			</div>
+			</div>
+		
+	</nav>
+		<form action="#">
+			<div class="row">
+				
+
+				<input type="text" name = "userName" id = "inpUser"   required="required">
+				<label id="lbl_inpUser" for="inpUser">UserName</label>
+			</div>
+			<div class="row">
+
+				<input type="password" name = "password" id="inpPassword"  required="required">
+				<label id="lbl_inpPassword" for="inpPassword">Password</label>
+			</div>
+			<div class="row textRrow">
+				<a href="#"></a>
+			</div>
+			<div class="row">
+				<input type="submit" value="Login" id="btn-login" class="btn">
+			</div>
+			<div class="row">
+				<p class="error-text">
+					Ошибка входа
+				</p>
+			</div>
+		</form>
+	</main>
+	<script type="text/javascript" src="script/login.js"></script>
+</body>
+</html>
