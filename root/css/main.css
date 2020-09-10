@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400&family=Raleway:ital,wght@0,500;0,600;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@500&family=PT+Sans+Narrow&family=Roboto&family=Roboto+Slab:wght@500&family=Rubik:wght@200&display=swap');
+
+
+/*---------------------Весь документ----------------------*/
+
+*{
+margin: 0;
+padding: 0;
+font-size: 15px;
+text-decoration: none;
+border: none;
+font-family: 'Roboto+Slab', sans-serif;
+box-sizing: border-box;
+}
+
+ul{
+	list-style: none;
+
+}
+/*-------------РАЗМЕТКА ---------------------**/
+
+input:invalid{
+ box-shadow: none;
+ 
+}
+
+.container{
+	width: 100%;
+	max-width: 1200px; 
+	margin: 0 auto;
+}
+
+
+main{
+	width: 100vw;
+	height: 100vh;
+	/*
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;*/
+	display: grid;
+    grid-template:3em auto/ auto ;
+    align-items: center;
+    justify-content: center;
+}
+/* -------Навигация-----------------*/
+nav {
+	width: 100vw;
+	height: 3em;	
+	background-color: #15344b;/*rgba(255,255,255, .1 ); */
+	
+}
+
+
+nav .container{
+	display: grid;	
+	grid-template:3em/15em auto 15em;
+}
+
+.lang{
+	justify-content: center;
+	justify-self:center;
+	align-self: center;
+	color: white;
+	position: relative;
+	width: 6em;
+	padding-left: 1em;
+	padding-top: 	1em;
+	height: 100%;
+	cursor: pointer;
+
+
+}
+
+.lang ul{
+	position: absolute;
+	top:3em;
+	width: 6em;
+	background: #15344b;;
+	color: white;
+	left: 0;
+	overflow-y: hidden;
+	height: 0;
+	transition: 3s;
+
+}
+
+.lang.active ul{
+	height: auto;
+	transition: 0.3s;
+}
+
+.lang ul li{
+	padding-left: 1em;
+	cursor: pointer;
+	transition: 0.1s;
+	padding-top: 0.3em;
+	padding-bottom: 0.5em;
+}
+
+.lang ul li:hover{
+	background-color: #077ca4;
+
+
+}
+
+#cur-lang{
+	position: relative;
+}
+
+.cur-lang::after{
+	content: ".";
+	color:transparent;
+	width: 3px;
+	height: 3px;
+	position: absolute;
+	left: 2.5em;
+	top: 0.4em;
+	border-top: 5px solid white;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	background-color: transparent;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
+.lang.active .cur-lang::after{
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid  white;
+	border-left: 5px solid transparent;
+	border-right:  5px solid transparent;
+}
+.logo{
+	display: flex;
+	justify-self:center;
+	align-items: center;
+
+}
+
+.logo .icon{
+	width: 2.5em;
+	height: 2.5em;
+	background-image:url(../img/test-icon2.png); 
+	/*background-color: black;*/
+	background-size: cover;
+	align-self: center; 
+	justify-self:center;
+}
+
+.logo .logo_cap{
+	color: #fff;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: left;
+}
+
+/* ---Планшет-----------------*/
+@media screen and (max-width: 992px) {
+	*{
+		font-size: 13px;
+
+	}
+
+	.error-text{
+		font-size: 1em;
+	}
+
+}
+
+@media screen and (max-width: 420px) {
+
+	.lang{
+		position:inherit;
+	}
+
+	.lang ul{
+		right: 0;
+		width: 100%;
+	}
+
+	.lang ul li{
+		padding-left: 5em;
+	}
+}

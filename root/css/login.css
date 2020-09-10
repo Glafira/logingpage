@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400&family=Raleway:ital,wght@0,500;0,600;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@500&family=PT+Sans+Narrow&family=Roboto&family=Roboto+Slab:wght@500&family=Rubik:wght@200&display=swap');
+
+
+/*---------------------Весь документ----------------------*/
+
+*{
+margin: 0;
+padding: 0;
+font-size: 15px;
+text-decoration: none;
+border: none;
+font-family: 'Roboto+Slab', sans-serif;
+box-sizing: border-box;
+}
+
+ul{
+	list-style: none;
+
+}
+/*-------------РАЗМЕТКА ФОРМА Входа---------------------**/
+
+body{
+	background-color: #032239;
+}
+
+input:invalid{
+ box-shadow: none;
+ /*box-shadow: inset 1px 0 5px 0 rgba(255,255,255, .1 ) ;*/
+ border-bottom: 2px solid rgba(255,255,255, .1 );
+ 
+ 
+}
+
+main{
+	width: 100vw;
+	height: 100vh;
+	/*
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;*/
+	display: grid;
+    grid-template:3em auto/ auto ;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------------Форма входа------------*/
+form{
+	max-width: 400px;
+	width:80%;
+	padding: 1em;
+	background-color: transparent;
+	/*border: 1px solid black;*/
+	box-shadow: 0 0 4px 0.1px #000;
+	justify-self: center;
+
+}
+
+form .row{
+	position: relative;
+	}
+
+
+form .row label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1.3em;
+	padding-left: 3em;
+	color: white;/*;#26abe3;*/
+	font-weight: 200;
+	transition: 0.2s linear;
+
+}	
+
+form .textRrow{
+	text-align: center;
+	padding-bottom: 1em;
+	
+}
+
+form a{
+	color: white;
+	font-weight: 200;
+	font-style: italic;
+	transition: 0.4s linear; /* Время изменения */
+}
+
+form a:hover{
+	color: #26abe3;
+	
+}
+
+form input{
+	
+	width: 100%;
+	padding: 1.3em;
+	padding-left: 3em;
+	padding-bottom: 0.5em;
+	font-weight: 500;
+	letter-spacing: 1px;
+	background: transparent;/*rgba(255,255,255, .1 ); /* #203a6b;*/
+	color: white;/*#26abe3;*/
+	margin-bottom: 0.5em;	
+	
+	
+}
+
+form input[type="text"],
+form input[type="password"]
+{
+		
+		border-bottom: 2px solid white;
+		
+}
+
+form input:valid{
+	
+  background: rgba(255,255,255,.1);
+}
+
+
+form  label{
+
+}
+
+form input:focus~label,
+form input:valid~label{
+	padding-top: 0.3em;
+	font-size: 0.84em;
+	padding-left: 0.8em;
+	transition: 0.2s linear;
+	transition: 0.2s;
+}
+
+form input:focus{
+		
+}
+
+form .row .btn{
+	/*background: #26abe3;*/
+	background: transparent;
+	color: white;/*#279cc4;;*/
+	border: 2px solid rgba(20,150,255,1);
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0.4em 1em;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 3px; 
+	width: auto;
+	box-shadow: none;
+}
+
+.row .btn:hover{	
+	background:  #077ca4;
+	color:#203a6b;
+	transition: 0.3s;
+}
+
+.error-text{
+	color: Red;
+	text-align: left;
+	font-size: 0.8em;
+}
